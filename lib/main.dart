@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 //in order to use hot reload we need to put the code in stateless widget
@@ -17,6 +18,7 @@ class Myapp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50.0,
@@ -35,9 +37,77 @@ class Myapp extends StatelessWidget {
                 "Flutter Developer",
                 style: TextStyle(
                   fontSize: 30.0,
-                  color: Colors.white,
+                  color: Colors.teal.shade100,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'SourceSansPro',
+                  letterSpacing: 2.5,
+                  fontFamily: 'Source Sans Pro',
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  thickness: 1.0,
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(
+                  vertical: 20.0,
+                  horizontal: 10.0,
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        color: Colors.teal.shade900,
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        "+91 98989 89898",
+                        style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(
+                  vertical: 20.0,
+                  horizontal: 10.0,
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Row(
+                    //Can also use listtile instead of row to make work simple.
+                    children: [
+                      Icon(
+                        Icons.email,
+                        color: Colors.teal.shade900,
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        "ayushkulshrestha2001@gmail.com",
+                        style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
